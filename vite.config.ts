@@ -10,8 +10,8 @@ export default defineConfig(({ mode }) => {
       lib: {
         entry: resolve(__dirname, 'src/index.ts'),
         name: 'DiygwEditor',
-        fileName: 'index',
-        formats: ['es', 'cjs', 'umd'],
+        formats: ["es", "cjs", "umd"],
+        fileName: (format) => `index.${format}.js`
       },
       rollupOptions: {
         external: [

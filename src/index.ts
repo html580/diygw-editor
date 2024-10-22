@@ -1,10 +1,12 @@
 import type { App } from 'vue'
-import Editor from './Editor.vue'
+import DiygwEditor from './Editor.vue'
 
 const install = (app: App) => {
-    app.component('DiygwEditor', Editor)
+    app.component('DiygwEditor', DiygwEditor)
 }
 
-export default {
-    install
+export {
+    install,
+    DiygwEditor
 }
+export default DiygwEditor;
