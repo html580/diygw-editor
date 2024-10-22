@@ -1,0 +1,44 @@
+{
+  "name": "diygw-editor",
+  "private": true,
+  "version": "0.0.0",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.esm.js",
+  "types": "./dist/types/index.d.ts",
+  "unpkg": "./dist/index.umd.js",
+  "jsdelivr": "./dist/index.umd.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build --mode prod",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@hufe921/canvas-editor": "^0.9.95",
+    "@hufe921/canvas-editor-plugin-barcode1d": "^0.0.3",
+    "@hufe921/canvas-editor-plugin-barcode2d": "^0.0.4",
+    "@hufe921/canvas-editor-plugin-case": "^0.0.1",
+    "@hufe921/canvas-editor-plugin-codeblock": "^0.0.2",
+    "@hufe921/canvas-editor-plugin-diagram": "^0.0.2",
+    "@hufe921/canvas-editor-plugin-docx": "^0.0.5",
+    "@hufe921/canvas-editor-plugin-excel": "^0.0.1",
+    "@hufe921/canvas-editor-plugin-floating-toolbar": "^0.0.4",
+    "prismjs": "^1.29.0",
+    "vue": "^3.5.10"
+  },
+  "devDependencies": {
+    "@types/prismjs": "^1.26.4",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.8",
+    "vue-tsc": "^2.1.6"
+  }
+}
